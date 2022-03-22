@@ -28,12 +28,13 @@ namespace pokemons
 
         private void refreshTable()
         {
-            throw new NotImplementedException();
+            dgvPokemons.DataSource = p.GetAllPokemons();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             pokemon pokemon = new pokemon();
+            pokemon.Tyoe = txtType.Text;
             pokemon.Type = txtType.Text;
             pokemon.Name = txtName.Text;
             

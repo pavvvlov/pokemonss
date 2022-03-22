@@ -9,6 +9,14 @@ namespace pokemons.Controllers
 {
     class pokemonsController
     {
+        public List<pokemon> GetAllPokemons()
+        {
+            using (Database1Entities ex = new Database1Entities())
+            {
+                return ex.pokemons.ToList();
+            }
+        }
+
         public void CreatePokemons(pokemon pokemon)
         {
             using (Database1Entities ex = new Database1Entities())
