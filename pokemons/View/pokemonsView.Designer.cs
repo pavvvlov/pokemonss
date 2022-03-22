@@ -32,10 +32,6 @@ namespace pokemons
         {
             this.components = new System.ComponentModel.Container();
             this.dgvPokemons = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tyoeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pokemonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -43,6 +39,10 @@ namespace pokemons
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tyoeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pokemonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pokemonBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -60,29 +60,6 @@ namespace pokemons
             this.dgvPokemons.Name = "dgvPokemons";
             this.dgvPokemons.Size = new System.Drawing.Size(328, 224);
             this.dgvPokemons.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // tyoeDataGridViewTextBoxColumn
-            // 
-            this.tyoeDataGridViewTextBoxColumn.DataPropertyName = "Tyoe";
-            this.tyoeDataGridViewTextBoxColumn.HeaderText = "Tyoe";
-            this.tyoeDataGridViewTextBoxColumn.Name = "tyoeDataGridViewTextBoxColumn";
-            // 
-            // pokemonBindingSource
-            // 
-            this.pokemonBindingSource.DataSource = typeof(pokemons.Models.pokemon);
             // 
             // lblType
             // 
@@ -150,6 +127,30 @@ namespace pokemons
             this.btnDel.TabIndex = 7;
             this.btnDel.Text = "Del";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // tyoeDataGridViewTextBoxColumn
+            // 
+            this.tyoeDataGridViewTextBoxColumn.DataPropertyName = "Tyoe";
+            this.tyoeDataGridViewTextBoxColumn.HeaderText = "Tyoe";
+            this.tyoeDataGridViewTextBoxColumn.Name = "tyoeDataGridViewTextBoxColumn";
+            // 
+            // pokemonBindingSource
+            // 
+            this.pokemonBindingSource.DataSource = typeof(pokemons.Models.pokemon);
             // 
             // pokemonsView
             // 

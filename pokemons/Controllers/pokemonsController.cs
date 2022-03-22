@@ -32,5 +32,15 @@ namespace pokemons.Controllers
                 ex.SaveChanges();
             }
         }
+        public void DeletePokemons(int id)
+        {
+            using (Database1Entities ex = new Database1Entities())
+            {
+                
+                
+                ex.pokemons.Remove(ex.pokemons.ToList()[id]);
+                ex.SaveChanges();
+            }
+        }
     }
 }
