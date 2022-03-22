@@ -43,5 +43,17 @@ namespace pokemons
             refreshTable();
             
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvPokemons.CurrentRow;
+            int id = int.Parse(row.Cells["Id"].Value.ToString());
+            pokemon pokemon = new pokemon();
+            pokemon.Id = id;
+            pokemon.Type = txtType.Text;
+            pokemon.Tyoe = txtType.Text;
+            p.Updatepokemon(id, pokemon);
+            refreshTable();
+        }
     }
 }

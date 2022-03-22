@@ -31,6 +31,12 @@ namespace pokemons.Controllers
                 ex.pokemons.Add(pokemon);
                 ex.SaveChanges();
             }
+            
+        }
+
+        internal void Updatepokemon(int id, pokemon pokemon)
+        {
+            throw new NotImplementedException();
         }
     }
 }
