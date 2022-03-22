@@ -43,5 +43,15 @@ namespace pokemons
             refreshTable();
             
         }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvPokemons.CurrentRow;
+            int id = int.Parse(row.Cells[0].Value.ToString());
+ 
+            p.DeletePokemons(id);
+
+            refreshTable();
+        }
     }
 }
